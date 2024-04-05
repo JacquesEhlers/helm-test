@@ -1,0 +1,18 @@
+name: Trigger External Workflow
+
+on: pull_request
+
+jobs:
+  trigger_external_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Trigger External Workflow
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: JacquesEhlers/workflows
+          event-type: workflow_dispatch
+          workflow: .github/workflows/validation.yaml
