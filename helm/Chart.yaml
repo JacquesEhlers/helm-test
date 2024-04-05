@@ -2,4 +2,4 @@ apiVersion: v2
 name: my-servier
 
 version: 0.0.9
-appVersion: "0.0.9"
+appVersion: "0.0.8"
